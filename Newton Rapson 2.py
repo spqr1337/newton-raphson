@@ -10,17 +10,18 @@ txt2 = "Foram necessárias {} iterações."
 x = y = fx = fxd = 1
 cont = 0
 
-if a==1:
+def entrada():
     for i in range(b):
         w = float(input(txt.format(i+1)))
         cons.append(w)
+
+if a==1:
+    entrada()
     x = cons[-1]*-1
     y = x/cons[0]
     print("A função possui raiz real em: ", y)
 elif a==2:
-    for i in range(b):
-        w = float(input(txt.format(i+1)))
-        cons.append(w)
+    entrada()
     delta = (cons[1]**2)-(4*cons[0]*cons[2])
     if delta<0:
         print("A função não possui raiz real.")
@@ -32,9 +33,7 @@ elif a==2:
         print("A função possui raiz X2: ", x2)
 else:
     c = float(input("Entre com a tolerância de erro: "))
-    for i in range(b):
-        w = float(input(txt.format(i+1)))
-        cons.append(w)
+    entrada()
 
     for j in range(b):
         s = cons[j]*(a - j)
