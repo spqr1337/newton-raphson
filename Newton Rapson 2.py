@@ -1,14 +1,17 @@
 import math
 
+print("Instruções: caso você preencha todos os valores com 0 (zero)")
+print("o programa irá travar. Caso ele esteja demorando muito para")
+print("dar um resultado, você pode ter inserido uma função sem raiz real")
+print("e daí o programa ficará preso num loop infinito.")
+
 a = int(input("Entre com o grau da função: "))
 b = a+1
 d = a-1
 cons = []
 tombo = []
 txt = "Entre com a {}a constante: "
-txt2 = "Foram necessárias {} iterações."
 x = y = fx = fxd = 1
-cont = 0
 
 def entrada():
     for i in range(b):
@@ -51,6 +54,5 @@ else:
 
         x = x-(fx/fxd)
         fx = abs(fx)
-        cont = cont+1
+
     print("A função possui uma raiz real em: ", x)
-    print(txt2.format(cont))
