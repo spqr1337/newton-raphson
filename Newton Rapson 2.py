@@ -21,8 +21,11 @@ def entrada():
 if a==1:
     entrada()
     x = cons[-1]*-1
-    y = x/cons[0]
-    print("A função possui raiz real em: ", y)
+    if cons[0]==0:
+        print("A função não possui raiz.")
+    else:
+        y = x/cons[0]
+        print("A função possui raiz real em: ", y)
 elif a==2:
     entrada()
     delta = (cons[1]**2)-(4*cons[0]*cons[2])
